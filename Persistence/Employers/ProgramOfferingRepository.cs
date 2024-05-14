@@ -1,11 +1,12 @@
-﻿using Domain.Employers;
+﻿using Core.Persistence.Interfaces;
+using Domain.Employers;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Cosmos.Linq;
 using Microsoft.Extensions.Configuration;
 
 namespace Persistence.Employers
 {
-    public class ProgramOfferingRepository
+    public class ProgramOfferingRepository : IProgramOfferingRepository
     {
         private readonly IConfiguration _configuration;
         private readonly Container _offeringsContainer;

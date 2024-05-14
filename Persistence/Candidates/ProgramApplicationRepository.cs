@@ -1,10 +1,11 @@
-﻿using Domain.Candidates;
+﻿using Core.Persistence.Interfaces;
+using Domain.Candidates;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Extensions.Configuration;
 
 namespace Persistence.Candidates
 {
-    public class ProgramApplicationRepository
+    public class ProgramApplicationRepository : IProgramApplicationRepository
     {
         private readonly IConfiguration _configuration;
         private readonly Container _applicationsContainer;
