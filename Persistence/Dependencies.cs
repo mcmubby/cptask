@@ -20,7 +20,7 @@ namespace Persistence
                 var cosmosClientOptions = new CosmosClientOptions { ApplicationName = dbName };
 
                 var cosmosClient = new CosmosClient(uri, primaryKey, cosmosClientOptions);
-                //cosmosClient.CreateDatabaseIfNotExistsAsync(uri).Wait();
+                cosmosClient.CreateDatabaseIfNotExistsAsync(dbName).Wait();
 
                 return cosmosClient;
             });

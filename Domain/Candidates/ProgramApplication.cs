@@ -1,7 +1,10 @@
-﻿namespace Domain.Candidates
+﻿using Newtonsoft.Json;
+
+namespace Domain.Candidates
 {
     public class ProgramApplication
     {
+        [JsonProperty("id")]
         public required string Id { get; set; }
         public required string ProgramId { get; set; }
         public required List<QuestionResponse> PersonalInformation { get; set; }

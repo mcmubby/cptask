@@ -17,6 +17,8 @@ namespace Persistence.Employers
 
             var dbName = _configuration["DbSettings:DbName"];
             var containerName = "Offerings";
+            var db = cosmosClient.GetDatabase(dbName);
+            db.CreateContainerIfNotExistsAsync(containerName, "/id", 400).Wait();
             _offeringsContainer = cosmosClient.GetContainer(dbName, containerName);
         }
 
