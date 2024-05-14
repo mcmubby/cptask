@@ -15,17 +15,23 @@ namespace API.Controllers
             _applicationService = applicationService;
         }
 
+        /// <summary>
+        /// Submit application for a program/job offering
+        /// </summary>
+        /// <param name="request">The response to the program questions</param>
         [HttpPost("/apply")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(500)]
         public async Task<ActionResult> CreateApplication(CreateApplicationRequest request)
         {
             try
             {
                 await _applicationService.CreateProgramApplication(request);
-                return Ok();
+                return Created();
             }
             catch (Exception e)
             {
-                return BadRequest(e.Message);
+                return StatusCode(500, e.Message);
             }
         }
     }

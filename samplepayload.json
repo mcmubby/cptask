@@ -1,0 +1,150 @@
+[
+  { "_comment": "Create program payload**" },
+
+  {
+    "title": "Test Program",
+    "description": "Test",
+    "requestPhone": true,
+    "requestNationality": true,
+    "requestCurrentResidence": true,
+    "requestIDNumber": false,
+    "requestGender": false,
+    "additionalPersonalInformation": [
+      {
+        "type": 0,
+        "question": "Do you really want this job?"
+      }
+    ],
+    "programQuestions": [
+      {
+        "type": 3,
+        "question": "Pick one of the following",
+        "choice": [
+          "AB",
+          "BC",
+          "MK"
+        ],
+        "maxChoice": 1
+      },
+      {
+        "type": 5,
+        "question": "Years of experience?"
+      }
+
+    ]
+  },
+
+  { "_comment": "Update program payload**" },
+
+
+  {
+    "id": "insert - id - here",
+    "title": "Test Program",
+    "description": "Test",
+    "personalInformation": [
+      {
+        "type": 0,
+        "question": "First Name"
+      },
+      {
+        "type": 0,
+        "question": "Last Name"
+      },
+      {
+        "type": 0,
+        "question": "Email"
+      },
+      {
+        "type": 5,
+        "question": "Phone"
+      },
+      {
+        "type": 2,
+        "question": "Nationality"
+      },
+      {
+        "type": 2,
+        "question": "Current Residence"
+      },
+      {
+        "type": 2,
+        "question": "Gender"
+      }
+    ],
+    "programQuestions": [
+      {
+        "type": 3,
+        "question": "Pick two of following",
+        "choice": [
+          "AB",
+          "BC",
+          "JJ",
+          "MK"
+        ],
+        "maxChoice": 1
+      },
+      {
+        "type": 5,
+        "question": "Years of experience?"
+      }
+    ]
+  },
+
+  { "_comment": "Apply to program payload**" },
+
+  {
+    "programId": "insert - id - here",
+    "personalInformation": [
+      {
+        "type": 0,
+        "question": "First Name",
+        "response": "John"
+      },
+      {
+        "type": 0,
+        "question": "Last Name",
+        "response": "Doe"
+      },
+      {
+        "type": 0,
+        "question": "Email",
+        "response": "a@v.com"
+      },
+      {
+        "type": 5,
+        "question": "Phone",
+        "response": "701111111"
+      },
+      {
+        "type": 2,
+        "question": "Nationality",
+        "response": "Nigeria"
+      },
+      {
+        "type": 2,
+        "question": "Current Residence",
+        "response": "Nigeria"
+      },
+      {
+        "type": 3,
+        "question": "Gender Residence",
+        "response": "Male"
+      }
+    ],
+    "programResponses": [
+      {
+        "type": 3,
+        "question": "Pick one of the following",
+        "response": [
+          "AB",
+          "BC"
+        ]
+      },
+      {
+        "type": 5,
+        "question": "Years of experience?",
+        "response": 5
+      }
+    ]
+  }
+]
